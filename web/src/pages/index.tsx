@@ -5,6 +5,7 @@ import { useLocalStorage } from 'react-use'
 import { LOCAL_STORAGE_KEYS } from '@/constants'
 import { useRouter } from 'next/router'
 import { useEffect } from 'react'
+import { DeviceCard } from '@/components/DeviceCard'
 
 const Home = () => {
   const router = useRouter()
@@ -29,20 +30,7 @@ const Home = () => {
       <Grid gap={2} mt={2}>
         {data?.body.deviceList.length ? (
           data?.body.deviceList.map((device) => (
-            <Box
-              py={2}
-              px={4}
-              rounded={'lg'}
-              bg={'gray.50'}
-              borderWidth={'1px'}
-              borderColor={'gray.200'}
-              key={device.deviceId}
-            >
-              <Text fontSize={'xs'}>{device.deviceType}</Text>
-              <Text fontSize={'sm'} fontWeight={'bold'}>
-                {device.deviceName}
-              </Text>
-            </Box>
+            <DeviceCard device={device} key={device.deviceId} />
           ))
         ) : (
           <Text>デバイスがありません</Text>
