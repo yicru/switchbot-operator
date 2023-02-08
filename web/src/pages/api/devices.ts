@@ -1,7 +1,7 @@
 import {
   withSwitchBotClient,
   type WithSwitchBotClientHandler,
-} from '@/libs/switchbot'
+} from '@/libs/server/switchbot'
 import { Device, InfraredRemote } from '@/types/switchbot/device'
 
 export type DevicesResponse = {
