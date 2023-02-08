@@ -2,7 +2,7 @@ import {
   withSwitchBotClient,
   type WithSwitchBotClientHandler,
 } from '@/libs/switchbot'
-import { Device, InfraredRemote } from '@/types/swtichbot'
+import { Device, InfraredRemote } from '@/types/switchbot/device'
 
 export type DevicesResponse = {
   statusCode: number

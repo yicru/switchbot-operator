@@ -1,5 +1,5 @@
 import { Box, Text } from '@chakra-ui/react'
-import { Device } from '@/types/swtichbot'
+import { Device } from '@/types/switchbot/device'
 
 type Props = {
   device: Device
