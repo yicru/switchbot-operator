@@ -18,7 +18,7 @@ const handler: WithSwitchBotClientHandler<DevicesResponse> = async (
   res,
   client
 ) => {
-  const response = await client('/v1.0/devices')
+  const response = await client('/v1.1/devices')
   res.status(200).json(response)
 }
 

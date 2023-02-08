@@ -7,10 +7,10 @@ import { NextApiRequest, NextApiResponse } from 'next'
 export const createClient = (token: string, clientSecret: string) => {
   const t = Date.now().toString()
   const nonce = uuidV4()
-  const data = token + t + clientSecret
+  const data = token + t + nonce
   const signTerm = crypto
     .createHmac('sha256', clientSecret)
-    .update(Buffer.from(data, 'utf8'))
+    .update(Buffer.from(data, 'utf-8'))
     .digest()
   const sign = signTerm.toString('base64')
 
