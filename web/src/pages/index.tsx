@@ -27,7 +27,7 @@ const Home = () => {
         デバイス一覧
       </Text>
 
-      <Grid gap={2} mt={2}>
+      <Grid gap={4} mt={2} p={1}>
         {data?.body.deviceList.length ? (
           data?.body.deviceList.map((device) => (
             <DeviceCard device={device} key={device.deviceId} />

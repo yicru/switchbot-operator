@@ -7,10 +7,9 @@ type Props = {
 
 export const BaseLayout = ({ children }: Props) => {
   return (
-    <Box bg={'gray.50'}>
+    <Box>
       <Container
         as={Grid}
-        bg={'white'}
         templateColumns={'100%'}
         templateRows={'1fr'}
         sx={{
