@@ -20,6 +20,12 @@ export const CommandButton = ({ device, command }: Props) => {
         return 'Lock'
       case 'unlock':
         return 'Unlock'
+      case 'press':
+        return 'Press'
+      case 'turnOn':
+        return 'Turn On'
+      case 'turnOff':
+        return 'Turn Off'
     }
   }, [command.command])
 
